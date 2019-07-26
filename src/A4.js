@@ -1,10 +1,10 @@
 import React from 'react'
 import './A4.css'
 
-const A4 = ({ children }) => {
+const A4 = ({ children, className }) => {
   return (
     <div className="A4-outer">
-      <div className="A4-inner">
+      <div className={ `${className} A4-inner` } >
         { children }
       </div>
     </div>

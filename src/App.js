@@ -8,13 +8,14 @@ import Header from './Header'
 function App() {
   return (
     <div className="App">
-      <A4>
+      <A4 className="PageOne">
         <Header />
         <Timeline />
       </A4>
-      <A4>
-        <Header />
-        <Timeline />
+      <A4 className="PageTwo">
+        Experiences
+        <br/>
+        Motivation
       </A4>
     </div>
   );

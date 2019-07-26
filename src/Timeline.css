@@ -2,5 +2,22 @@
   grid-area: Timeline;
 
   background: azure;
+
+  padding: 30px 0px;
+
+  display: grid;
+  grid-template-areas: 'Years Content';
+  grid-template-columns: 100px auto;
+  grid-template-rows: 100%;
+}
+
+.Years {
+  grid-area: Years;
+
+  display: flex;
+  flex-direction: column;
+}
+.Years > .Year {
+  flex: 1 1 auto;
 }
 

@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 
 import A4 from './A4'
-import Timeline from './Timeline'
+import Timeline from './Timeline/Timeline'
 import Header from './Header'
 
 function App() {

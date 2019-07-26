@@ -1,13 +1,11 @@
 .Timeline {
   grid-area: Timeline;
 
-  background: azure;
-
-  padding: 30px 0px;
+  padding: 30px 10px;
 
   display: grid;
   grid-template-areas: 'Years Content';
-  grid-template-columns: 100px auto;
+  grid-template-columns: 30px auto;
   grid-template-rows: 100%;
 }
 
@@ -18,6 +16,35 @@
   flex-direction: column;
 }
 .Years > .Year {
+  position: relative;
   flex: 1 1 auto;
+  text-align: left;
 }
+.Years > .Year > .Label {
+  display: inline;
+  position: absolute;
 
+  transform: translate(-100%, 0) rotate(270deg) translate(-6px, 12px);
+  transform-origin: right top;
+
+  font-family: monaco,Consolas,Lucida Console,monospace;
+  font-size: 14px;
+  color: #444;
+}
+.Years > .Year > .Bar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: #444;
+}
+.Years > .Year > .Bar::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 1px;
+  width: 10px;
+  background: #444;
+}

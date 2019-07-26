@@ -1,3 +1,5 @@
 .Header {
   grid-area: Header;
+
+  background: aqua;
 }

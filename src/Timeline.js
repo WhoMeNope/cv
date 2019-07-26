@@ -13,7 +13,12 @@ function Timeline () {
       <div className="Years">
       {
         years.map(year => (
-          <div className="Year"> { year } </div>
+          <div className="Year">
+            <div className="Label">
+              { year }
+            </div>
+            <div className="Bar"></div>
+          </div>
         ))
       }
       </div>

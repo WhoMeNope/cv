@@ -1,5 +1,7 @@
-import React from 'react';
-import './Timeline.css';
+import React from 'react'
+import './Timeline.css'
+
+import Years from './Years'
 
 function Timeline () {
   const from = 2012
@@ -10,18 +12,7 @@ function Timeline () {
 
   return (
     <div className="Timeline">
-      <div className="Years">
-      {
-        years.map(year => (
-          <div className="Year">
-            <div className="Label">
-              { year }
-            </div>
-            <div className="Bar"></div>
-          </div>
-        ))
-      }
-      </div>
+      <Years from={from} to={to} />
     </div>
   );
 }

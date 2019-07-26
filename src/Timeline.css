@@ -3,3 +3,10 @@
 
   background: azure;
 }
+
+  /* display: grid; */
+  /* grid-template-areas: */
+  /*   'Header' */
+  /*   'Timeline'; */
+  /* grid-template-rows: 2fr 8fr; */
+  /* grid-template-columns: 100%; */

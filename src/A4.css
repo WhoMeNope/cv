@@ -1,0 +1,17 @@
+.A4-outer {
+  position: relative;
+  width: calc(100% - 30px);
+  padding-top: calc(141.4% - 30px);
+
+  margin: 15px;
+
+  background: white;
+}
+
+.A4-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}

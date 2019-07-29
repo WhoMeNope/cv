@@ -3,18 +3,34 @@ import './Items.css'
 
 const barWidth = 20
 
-function Items ({ from, to, content }) {
-  const count = to - from + 1
+function datePointInRange(from, to, date) {
+  const diff = date.getTime() - from.getTime()
+  const full = to.getTime() - from.getTime()
+  const percentage = (diff / full) * 100
 
+  return percentage + '%'
+}
+function datesToPercentage(start, end, from, to) {
+  if (!to) {
+    to = end
+  }
+
+  const full = Math.abs(start.getTime() - end.getTime())
+  const diff = Math.abs(to.getTime() - from.getTime())
+  const percentage = (diff / full) * 100
+  return percentage + '%'
+}
+
+function Items ({ from, to, content }) {
   return (
     <div className="Items">
     {
-      content.map((item, index) => {
+      content.map(({ date, title }, index) => {
         return (
           <div className="Item" style={{
-            top: 100,
-            left: index * barWidth + (index + 1) * barWidth / 3,
-            height: '50%',
+            top: datePointInRange(from, to, date.from),
+            left: index * barWidth + (index + 1) * barWidth / 4,
+            height: datesToPercentage(from, to, date.from, date.to),
           }}>
           </div>
         )

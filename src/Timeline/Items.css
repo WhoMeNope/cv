@@ -3,12 +3,13 @@
   position: relative;
 }
 .Items > .Item {
-  background: ;
+  background: #C8A2C8;
 
   position: absolute;
 
   width: 20px;
   border: 1px black solid;
+  box-sizing: border-box;
 }
 /* .Items > .Item::after { */
 /*   content: ''; */

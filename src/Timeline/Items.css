@@ -1,0 +1,17 @@
+.Items {
+  grid-area: Content;
+  position: relative;
+}
+.Items > .Item {
+  background: ;
+
+  position: absolute;
+
+  width: 20px;
+  border: 1px black solid;
+}
+/* .Items > .Item::after { */
+/*   content: ''; */
+/*   right: 0; */
+/*   height: 1px; */
+/* } */

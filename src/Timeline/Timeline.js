@@ -2,8 +2,7 @@ import React from 'react'
 import './Timeline.css'
 
 import Years from './Years'
-
-const barWidth = 20;
+import Items from './Items'
 
 function Timeline () {
   const from = 2012
@@ -32,21 +31,7 @@ function Timeline () {
   return (
     <div className="Timeline">
       <Years from={from} to={to} />
-
-      <div className="Content">
-      {
-        content.map((item, index) => {
-          return (
-            <div className="Item" style={{
-              top: 100,
-              left: index * barWidth + (index + 1) * barWidth / 3,
-              height: '50%',
-            }}>
-            </div>
-          )
-        })
-      }
-      </div>
+      <Items from={from} to={to} content={content} />
     </div>
   );
 }

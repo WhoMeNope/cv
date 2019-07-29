@@ -8,3 +8,21 @@
   grid-template-columns: 30px auto;
   grid-template-rows: 100%;
 }
+
+.Content {
+  grid-area: Content;
+  position: relative;
+}
+.Content > .Item {
+  background: ;
+
+  position: absolute;
+
+  width: 20px;
+  border: 1px black solid;
+}
+/* .Content > .Item::after { */
+/*   content: ''; */
+/*   right: 0; */
+/*   height: 1px; */
+/* } */

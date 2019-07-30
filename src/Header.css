@@ -1,5 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,500&display=swap');
+
 .Header {
   grid-area: Header;
 
-  background: aqua;
+  display: grid;
+  grid-template-areas:
+    'Name Phones Emails';
+  grid-template-columns: 4fr 2fr 2fr;
+  align-items: center;
+
+  padding: 4rem 0;
+
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+}
+.Header > .Name {
+  grid-area: Name;
+
+  padding-left: 2.5rem;
+
+  text-transform: uppercase;
+  text-align: left;
+
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+
+  color: #888;
+}
+.Header > .Phones {
+  grid-area: Phones;
+
+  text-align: left;
+
+  font-size: 0.9rem;
+  line-height: 1.0rem;
+
+  font-weight: 500;
+  color: #888;
+}
+.Header > .Emails {
+  grid-area: Emails;
+
+  text-align: left;
+
+  font-size: 0.9rem;
+  line-height: 1.0rem;
+
+  font-weight: 500;
+  color: #888;
 }

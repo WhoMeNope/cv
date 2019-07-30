@@ -11,8 +11,8 @@
   border: 1px black solid;
   box-sizing: border-box;
 }
-/* .Items > .Item::after { */
-/*   content: ''; */
-/*   right: 0; */
-/*   height: 1px; */
-/* } */
+.Items > .Item::after {
+  content: '';
+  right: 0;
+  height: 1px;
+}

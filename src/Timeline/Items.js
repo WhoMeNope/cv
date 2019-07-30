@@ -11,9 +11,7 @@ function datePointInRange(from, to, date) {
   return percentage + '%'
 }
 function datesToPercentage(start, end, from, to) {
-  if (!to) {
-    to = end
-  }
+  to = to || end
 
   const full = Math.abs(start.getTime() - end.getTime())
   const diff = Math.abs(to.getTime() - from.getTime())

@@ -5,11 +5,8 @@ import Years from './Years'
 import Items from './Items'
 
 function Timeline () {
-  const from = 2012
-  const to = 2019
-
-  const count = to - from + 1
-  const years = [...Array(count).keys()].map(year => year + from)
+  const from = new Date(2012, 0)
+  const to = new Date()
 
   const content = [
     {
@@ -28,7 +25,7 @@ function Timeline () {
     },
     {
       date: {
-        from: new Date(2015, 8, 1),
+        from: new Date(2015, 0, 1),
       },
       title: "Item 3",
     },
@@ -37,7 +34,7 @@ function Timeline () {
   return (
     <div className="Timeline">
       <Years from={from} to={to} />
-      <Items from={new Date(from, 0)} to={new Date(to + 1, 0)} content={content} />
+      <Items from={from} to={to} content={content} />
     </div>
   );
 }

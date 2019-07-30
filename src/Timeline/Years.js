@@ -2,8 +2,8 @@ import React from 'react'
 import './Years.css'
 
 function Years ({ from, to }) {
-  const count = to - from + 1
-  const years = [...Array(count).keys()].map(year => year + from)
+  const count = to.getFullYear() - from.getFullYear()
+  const years = [...Array(count).keys()].map(year => year + from.getFullYear())
 
   return (
     <div className="Years">

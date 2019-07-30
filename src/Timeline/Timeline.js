@@ -11,23 +11,23 @@ function Timeline () {
   const content = [
     {
       date: {
-        from: new Date(2012, 1, 1),
+        from: new Date(2012, 3, 1),
         to: new Date(2013, 8, 1),
       },
-      title: "Item 1",
+      title: "Long Item Title 1",
     },
     {
       date: {
         from: new Date(2013, 8, 1),
         to: new Date(2019, 0, 1),
       },
-      title: "Item 2",
+      title: "Even Longer Item Title 2",
     },
     {
       date: {
         from: new Date(2015, 0, 1),
       },
-      title: "Item 3",
+      title: "Short Item 3",
     },
   ]
 

@@ -10,6 +10,14 @@ function datePointInRange(from, to, date) {
 
   return percentage + '%'
 }
+function datePointInRangeReverse(from, to, date) {
+  const diff = date.getTime() - from.getTime()
+  const full = to.getTime() - from.getTime()
+  const percentage = (diff / full) * 100
+
+  return (100 - percentage) + '%'
+}
+
 function datesToPercentage(start, end, from, to) {
   to = to || end
 
@@ -36,6 +44,11 @@ function Items ({ from, to, content }) {
               top: datePointInRange(from, to, date.from),
               left: (index + 1) * barWidth + (index + 1) * barWidth / 4,
             }}>
+            </div>
+            <div className="Label" style={{
+              bottom: datePointInRangeReverse(from, to, date.from),
+            }}>
+              { title }
             </div>
           </React.Fragment>
         )

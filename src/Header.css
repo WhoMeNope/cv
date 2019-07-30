@@ -49,3 +49,8 @@
   font-weight: 500;
   color: #888;
 }
+
+.Header a {
+  color: inherit;
+  text-decoration: inherit;
+}

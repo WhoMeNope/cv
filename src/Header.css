@@ -27,10 +27,11 @@
 
   color: #888;
 }
+
 .Header > .Phones {
   grid-area: Phones;
 
-  text-align: left;
+  text-align: center;
 
   font-size: 0.9rem;
   line-height: 1.0rem;
@@ -38,16 +39,25 @@
   font-weight: 500;
   color: #888;
 }
+.Header > .Phones > div {
+  display: inline-block;
+  text-align: left;
+}
+
 .Header > .Emails {
   grid-area: Emails;
 
-  text-align: left;
+  text-align: center;
 
   font-size: 0.9rem;
   line-height: 1.0rem;
 
   font-weight: 500;
   color: #888;
+}
+.Header > .Emails > div {
+  display: inline-block;
+  text-align: left;
 }
 
 .Header a {

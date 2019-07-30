@@ -39,26 +39,30 @@ function Header () {
         { content.name }
       </div>
       <div className="Phones">
-      {
-        content.phones.map((phone, index) => (
-          <a href={formatLink(phone)} key={index}>
-          <div key={index}>
-            { phone }
-          </div>
-          </a>
-        ))
-      }
+        <div>
+        {
+          content.phones.map((phone, index) => (
+            <a href={formatLink(phone)} key={index}>
+            <div key={index}>
+              { phone }
+            </div>
+            </a>
+          ))
+        }
+        </div>
       </div>
       <div className="Emails">
-      {
-        content.addresses.map((email, index) => (
-          <a href={formatLink(email)} key={index}>
-          <div key={index}>
-            { email }
-          </div>
-          </a>
-        ))
-      }
+        <div>
+        {
+          content.addresses.map((email, index) => (
+            <a href={formatLink(email)} key={index}>
+            <div key={index}>
+              { email }
+            </div>
+            </a>
+          ))
+        }
+        </div>
       </div>
     </div>
   );

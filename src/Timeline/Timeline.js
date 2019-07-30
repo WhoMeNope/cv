@@ -11,7 +11,7 @@ function Timeline () {
   const content = [
     {
       date: {
-        from: new Date(2012, 8, 1),
+        from: new Date(2012, 1, 1),
         to: new Date(2013, 8, 1),
       },
       title: "Item 1",

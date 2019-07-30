@@ -25,7 +25,7 @@ function Items ({ from, to, content }) {
     {
       content.map(({ date, title }, index) => {
         return (
-          <React.Fragment>
+          <React.Fragment key={index}>
             <div className="Item" style={{
               top: datePointInRange(from, to, date.from),
               left: index * barWidth + (index + 1) * barWidth / 4,

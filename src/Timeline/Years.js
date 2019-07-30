@@ -15,8 +15,8 @@ function Years ({ from, to }) {
   return (
     <div className="Years">
     {
-      years.map(year => (
-        <div className="Year">
+      years.map((year, index) => (
+        <div className="Year" key={index}>
           <div className="Label">
             { year }
           </div>

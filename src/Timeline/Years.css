@@ -13,12 +13,13 @@
   display: inline;
   position: absolute;
 
-  transform: translate(-100%, 0) rotate(270deg) translate(-6px, 12px);
+  transform: translate(-100%, 0) rotate(270deg) translate(-1px, 6px);
   transform-origin: right top;
 
-  font-family: monaco,Consolas,Lucida Console,monospace;
+  font-family: Optima,Segoe,Segoe UI,Candara,Calibri,Arial,sans-serif;
+  font-weight: 400;
   font-size: 14px;
-  color: #444;
+  color: #999;
 
   cursor: default;
 }
@@ -27,15 +28,17 @@
   right: 0;
   top: 0;
   bottom: 0;
-  width: 1px;
-  background: #444;
+  width: 2px;
+
+  background: #BBB;
 }
 .Years > .Year > .Bar::after {
   content: "";
   position: absolute;
-  right: 0;
+  left: 0;
   top: 0;
-  height: 1px;
-  width: 10px;
-  background: #444;
+  height: 2px;
+  width: 13px;
+
+  background: #BBB;
 }

@@ -1,14 +1,15 @@
 .Items {
   grid-area: Content;
   position: relative;
+
+  margin: 0 1rem;
 }
 .Items > .Item {
-  background: #C8A2C8;
+  background: #C6B2F0;
 
   position: absolute;
 
   width: 20px;
-  border: 1px black solid;
   box-sizing: border-box;
 }
 .Items > .Line {
@@ -16,11 +17,13 @@
   right: 0;
   height: 0px;
 
-  border-top: 1px black dashed;
+  border-top: 1px #999 dashed;
 }
 .Items > .Label {
   position: absolute;
   right: 0;
+
+  color: #777;
 
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;

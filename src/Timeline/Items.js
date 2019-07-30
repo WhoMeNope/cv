@@ -25,12 +25,19 @@ function Items ({ from, to, content }) {
     {
       content.map(({ date, title }, index) => {
         return (
-          <div className="Item" style={{
-            top: datePointInRange(from, to, date.from),
-            left: index * barWidth + (index + 1) * barWidth / 4,
-            height: datesToPercentage(from, to, date.from, date.to),
-          }}>
-          </div>
+          <React.Fragment>
+            <div className="Item" style={{
+              top: datePointInRange(from, to, date.from),
+              left: index * barWidth + (index + 1) * barWidth / 4,
+              height: datesToPercentage(from, to, date.from, date.to),
+            }}>
+            </div>
+            <div className="Line" style={{
+              top: datePointInRange(from, to, date.from),
+              left: (index + 1) * barWidth + (index + 1) * barWidth / 4,
+            }}>
+            </div>
+          </React.Fragment>
         )
       })
     }

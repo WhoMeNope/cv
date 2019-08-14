@@ -7,7 +7,7 @@ function formatLink(input) {
     return re.test(email);
   }
   function validatePhone(inputtxt) {
-    var re = /^(\+?([0-9]{1,3})[-. ]?)?([0-9]{3})[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+    const re = /^(\+[0-9]{1,3})?([-. ]?[0-9]{3,4}){3}$/
     return re.test(inputtxt)
   }
 

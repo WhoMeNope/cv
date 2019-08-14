@@ -20,18 +20,8 @@ function formatLink(input) {
   return input
 }
 
-function Header () {
-  const content = {
-    name: 'First Lastname',
-    phones: [
-      '202-555-0197',
-      '+1-202-555-0122',
-    ],
-    addresses: [
-      'name@company.com',
-      'www.website.com',
-    ],
-  }
+function Header ({ content }) {
+  console.log(content)
 
   return (
     <div className="Header">

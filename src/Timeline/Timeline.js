@@ -9,7 +9,6 @@ function minMaxDates (content) {
   let max = content[0].date.from
 
   content.forEach(({date}) => {
-    console.log(date)
     if ('from' in date) {
       min = date.from < min ? date.from : min
     }
@@ -25,14 +24,19 @@ function orderContent(content) {
   let ordered = []
 
   while (content.length) {
+    const sub = []
+
     const pivot = content.shift()
 
-    ordered.push(pivot)
+    sub.push(pivot)
     content.forEach((elem) => {
       if (elem.category === pivot.category)
-        ordered.push(elem)
+        sub.push(elem)
     })
     content = content.filter(elem => elem.category !== pivot.category)
+
+    const subordered = sub.sort((a, b) => a.date.from - b.date.from)
+    ordered.push(...subordered)
   }
 
   return ordered
@@ -41,8 +45,7 @@ function orderContent(content) {
 function Timeline ({ content }) {
   const { min, max } = minMaxDates(content)
 
-  // content = orderContent(content)
-  content = content.sort((a, b) => a.date.from - b.date.from)
+  content = orderContent(content)
 
   const from = new Date(min.getFullYear(), 0)
   const to = new Date()

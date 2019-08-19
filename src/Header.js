@@ -21,8 +21,6 @@ function formatLink(input) {
 }
 
 function Header ({ content }) {
-  console.log(content)
-
   return (
     <div className="Header">
       <div className="Name">

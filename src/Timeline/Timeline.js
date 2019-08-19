@@ -4,32 +4,18 @@ import './Timeline.css'
 import Years from './Years'
 import Items from './Items'
 
-function Timeline () {
+function minMaxDates (content) {
+  let min = content[0].date.from
+  let max = content[0].date.from
+
+  return { min, max }
+}
+
+function Timeline ({ content }) {
+  const { min, max } = minMaxDates(content)
+
   const from = new Date(2012, 0)
   const to = new Date()
-
-  const content = [
-    {
-      date: {
-        from: new Date(2012, 3, 1),
-        to: new Date(2013, 8, 1),
-      },
-      title: "Long Item Title 1",
-    },
-    {
-      date: {
-        from: new Date(2013, 8, 1),
-        to: new Date(2019, 0, 1),
-      },
-      title: "Even Longer Item Title 2",
-    },
-    {
-      date: {
-        from: new Date(2015, 0, 1),
-      },
-      title: "Short Item 3",
-    },
-  ]
 
   return (
     <div className="Timeline">

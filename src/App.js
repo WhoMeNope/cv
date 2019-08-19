@@ -10,13 +10,13 @@ import Timeline from './Timeline/Timeline'
 import Header from './Header'
 
 function App() {
-  const { header } = content
+  const { header, timeline } = content
 
   return (
     <div className="App">
       <A4 className="PageOne">
         <Header content={ header } />
-        <Timeline />
+        <Timeline content={ timeline } />
       </A4>
       <A4 className="PageTwo">
         Experiences

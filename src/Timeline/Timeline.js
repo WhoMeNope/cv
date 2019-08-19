@@ -8,9 +8,14 @@ function minMaxDates (content) {
   let min = content[0].date.from
   let max = content[0].date.from
 
-  content.forEach((date) => {
-    min = date.from < min ? date.from : min
-    max = date.to > max ? date.to : max
+  content.forEach(({date}) => {
+    console.log(date)
+    if ('from' in date) {
+      min = date.from < min ? date.from : min
+    }
+    if ('to' in date) {
+      max = date.to > max ? date.to : max
+    }
   })
 
   return { min, max }
@@ -37,6 +42,7 @@ function Timeline ({ content }) {
   const { min, max } = minMaxDates(content)
 
   // content = orderContent(content)
+  content = content.sort((a, b) => a.date.from - b.date.from)
 
   const from = new Date(min.getFullYear(), 0)
   const to = new Date()
@@ -46,7 +52,7 @@ function Timeline ({ content }) {
       <Years from={from} to={to} />
       <Items from={from} to={to} content={content} />
     </div>
-  );
+  )
 }
 
 export default Timeline

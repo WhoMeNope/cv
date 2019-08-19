@@ -35,23 +35,23 @@ function Items ({ from, to, content }) {
         return (
           <React.Fragment key={index}>
             <div className="Item" style={{
-              top: datePointInRange(from, to, date.from),
+              bottom: datePointInRange(from, to, date.from),
               left: index * barWidth + (index + 1) * barWidth / 4,
               height: datesToPercentage(from, to, date.from, date.to),
             }}>
             </div>
             <div className="Line" style={{
-              top: datePointInRange(from, to, date.from),
+              bottom: datePointInRange(from, to, date.from),
               left: (index + 1) * barWidth + (index + 1) * barWidth / 4,
             }}>
             </div>
             <div className="Label" style={{
-              bottom: datePointInRangeReverse(from, to, date.from),
+              bottom: datePointInRange(from, to, date.from),
             }}>
               { title }
             </div>
             <div className="Sublabel" style={{
-              top: datePointInRange(from, to, date.from),
+              top: datePointInRangeReverse(from, to, date.from),
             }}>
               { subtitle }
             </div>

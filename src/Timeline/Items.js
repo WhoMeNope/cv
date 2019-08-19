@@ -31,7 +31,7 @@ function Items ({ from, to, content }) {
   return (
     <div className="Items">
     {
-      content.map(({ date, title }, index) => {
+      content.map(({ date, title, subtitle }, index) => {
         return (
           <React.Fragment key={index}>
             <div className="Item" style={{
@@ -49,6 +49,11 @@ function Items ({ from, to, content }) {
               bottom: datePointInRangeReverse(from, to, date.from),
             }}>
               { title }
+            </div>
+            <div className="Sublabel" style={{
+              top: datePointInRange(from, to, date.from),
+            }}>
+              { subtitle }
             </div>
           </React.Fragment>
         )

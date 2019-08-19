@@ -13,7 +13,9 @@
   display: inline;
   position: absolute;
 
-  transform: translate(-100%, 0) rotate(270deg) translate(-1px, 6px);
+  bottom: 0;
+
+  transform: translate(-100%, 0) rotate(270deg) translate(22px, 8px);
   transform-origin: right top;
 
   font-family: Optima,Segoe,Segoe UI,Candara,Calibri,Arial,sans-serif;
@@ -36,7 +38,7 @@
   content: "";
   position: absolute;
   left: 0;
-  top: 0;
+  bottom: 0;
   height: 2px;
   width: 13px;
 

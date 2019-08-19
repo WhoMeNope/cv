@@ -10,10 +10,17 @@ function yearFraction(date) {
 
 function Years ({ from, to }) {
   const count = to.getFullYear() - from.getFullYear()
-  const years = [...Array(count).keys()].map(year => year + from.getFullYear())
+  const years = [...Array(count).keys()]
+    .map(index => to.getFullYear() - index - 1)
 
   return (
     <div className="Years">
+      <div className="Year" style={{flex: yearFraction(to)}}>
+        <div className="Label">
+          { to.getFullYear() }
+        </div>
+        <div className="Bar"></div>
+      </div>
     {
       years.map((year, index) => (
         <div className="Year" key={index}>
@@ -24,12 +31,6 @@ function Years ({ from, to }) {
         </div>
       ))
     }
-      <div className="Year" style={{flex: yearFraction(to)}}>
-        <div className="Label">
-          { to.getFullYear() }
-        </div>
-        <div className="Bar"></div>
-      </div>
     </div>
   )
 }

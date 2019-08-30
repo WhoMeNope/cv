@@ -28,10 +28,20 @@ function datesToPercentage(start, end, from, to) {
 }
 
 function Items ({ from, to, content }) {
+  const numbered = content.map((item, index) => {
+    return {item, index}
+  })
+  const ordered = numbered.sort((a, b) => {
+    return b.item.date.to - a.item.date.to
+  })
+  ordered.forEach((a) => {
+    console.log(a.item)
+  })
   return (
     <div className="Items">
     {
       content.map(({ date, title, subtitle }, index) => {
+        console.log(title)
         return (
           <React.Fragment key={index}>
             <div className="Item" style={{

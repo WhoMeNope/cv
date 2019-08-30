@@ -12,9 +12,10 @@ body {
   width: 100%;
 
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -23,6 +24,8 @@ body {
   height: 100%;
   width: 100%;
   position: relative;
+
+  page-break-after: avoid;
 }
 
 code {
@@ -30,3 +33,17 @@ code {
     monospace;
 }
 
+@page {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+@media print {
+  html {
+    background: none;
+  }
+
+  html, body, #root {
+    height: auto;
+  }
+}

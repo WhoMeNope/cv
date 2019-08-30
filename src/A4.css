@@ -8,6 +8,15 @@
   background: white;
 }
 
+@media print {
+  .A4-outer {
+    width: 100%;
+    padding-top: 141.4%;
+
+    margin: 0;
+  }
+}
+
 .A4-inner {
   position: absolute;
   top: 0;

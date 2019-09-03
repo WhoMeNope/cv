@@ -23,16 +23,17 @@
   position: absolute;
   right: 0;
 
+  text-align: right;
+}
+.Items > .Label > .Main {
   color: #777;
 
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
   font-size: 1.0rem;
+  line-height: 1.0rem;
 }
-.Items > .Sublabel {
-  position: absolute;
-  right: 0;
-
+.Items > .Label > .Sub {
   color: #777;
 
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;

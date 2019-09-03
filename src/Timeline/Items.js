@@ -58,12 +58,8 @@ function Items ({ from, to, content }) {
             <div className="Label" style={{
               bottom: datePointInRange(from, to, date.from),
             }}>
-              { title }
-            </div>
-            <div className="Sublabel" style={{
-              top: datePointInRangeReverse(from, to, date.from),
-            }}>
-              { subtitle }
+              <div className="Main"> { title } </div>
+              <div className="Sub"> { subtitle } </div>
             </div>
           </React.Fragment>
         )

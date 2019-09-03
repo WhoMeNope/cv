@@ -32,8 +32,8 @@ function Items ({ from, to, content }) {
     return { item, index }
   })
   const ordered = numbered.sort((a, b) => {
-    let c = a.item.date.to || new Date()
-    let d = b.item.date.to || new Date()
+    let c = a.item.date.from
+    let d = b.item.date.from
     return d - c
   })
 

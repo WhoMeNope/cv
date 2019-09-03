@@ -32,16 +32,16 @@ function Items ({ from, to, content }) {
     return {item, index}
   })
   const ordered = numbered.sort((a, b) => {
-    return b.item.date.to - a.item.date.to
-  })
-  ordered.forEach((a) => {
-    console.log(a.item)
+    let c = a.item.date.to || new Date()
+    let d = b.item.date.to || new Date()
+    return d - c
   })
   return (
     <div className="Items">
     {
-      content.map(({ date, title, subtitle }, index) => {
-        console.log(title)
+      ordered.map(({ item, index }) => {
+        const { date, title, subtitle } = item
+
         return (
           <React.Fragment key={index}>
             <div className="Item" style={{

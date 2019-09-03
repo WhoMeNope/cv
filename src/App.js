@@ -8,6 +8,7 @@ import GitHubCalendar from 'react-github-calendar'
 import A4 from './A4'
 import Timeline from './Timeline/Timeline'
 import Header from './Header'
+import Footer from './Footer'
 
 function App() {
   const { header, timeline } = content
@@ -17,6 +18,7 @@ function App() {
       <A4 className="PageOne">
         <Header content={ header } />
         <Timeline content={ timeline } />
+        <Footer />
       </A4>
       <A4 className="PageTwo">
         Experiences

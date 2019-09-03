@@ -1,0 +1,14 @@
+.Header {
+  grid-area: Header;
+
+  display: grid;
+  grid-template-areas:
+    'Name Phones Emails';
+  grid-template-columns: 4fr 2fr 2fr;
+  align-items: center;
+
+  padding: 4rem 0;
+
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+}

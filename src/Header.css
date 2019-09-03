@@ -6,10 +6,9 @@
   display: grid;
   grid-template-areas:
     'Name Phones Emails';
-  grid-template-columns: 4fr 2fr 2fr;
   align-items: center;
 
-  padding: 4rem 0;
+  padding: 2rem 0;
 
   font-family: 'Work Sans', sans-serif;
   font-weight: 300;
@@ -17,10 +16,7 @@
 .Header > .Name {
   grid-area: Name;
 
-  padding-left: 2.5rem;
-
   text-transform: uppercase;
-  text-align: left;
 
   font-size: 2.5rem;
   line-height: 2.5rem;

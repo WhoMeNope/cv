@@ -12,7 +12,10 @@
   font-weight: 300;
 }
 
+.Footer > .Link {
+  color: #777;
+}
 .Footer > .Link a {
-  color: black;
+  color: inherit;
   text-decoration: none;
 }

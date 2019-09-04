@@ -28,11 +28,6 @@ function datesToPercentage(start, end, from, to) {
 }
 
 function getColor(category, pallete, colorDict) {
-  function RGB_Log_Shade (p,c) {
-    var i=parseInt,r=Math.round,[a,b,c,d]=c.split(","),P=p<0,t=P?0:p*255**2,P=P?1+p:1-p;
-    return"rgb"+(d?"a(":"(")+r((P*i(a[3]=="a"?a.slice(5):a.slice(4))**2+t)**0.5)+","+r((P*i(b)**2+t)**0.5)+","+r((P*i(c)**2+t)**0.5)+(d?","+d:")");
-  }
-
   const colorCount = pallete.length
   const assignedColors = Object.keys(colorDict).length
 
@@ -44,6 +39,11 @@ function getColor(category, pallete, colorDict) {
   colorDict[category] = color
 
   return color
+}
+
+function RGB_Log_Shade (p,c) {
+  var i=parseInt,r=Math.round,[a,b,c,d]=c.split(","),P=p<0,t=P?0:p*255**2,P=P?1+p:1-p;
+  return"rgb"+(d?"a(":"(")+r((P*i(a[3]=="a"?a.slice(5):a.slice(4))**2+t)**0.5)+","+r((P*i(b)**2+t)**0.5)+","+r((P*i(c)**2+t)**0.5)+(d?","+d:")");
 }
 
 const pallete = [
@@ -66,7 +66,6 @@ function Items ({ from, to, content }) {
   })
 
   const slots = Array.apply(null, Array(10)).map(() => true)
-
   const colorDictionary = {}
 
   return (
@@ -103,13 +102,13 @@ function Items ({ from, to, content }) {
           <React.Fragment key={index}>
             <div className="Item" style={{
               background: color,
-              bottom: datePointInRange(from, to, date.from) + '%',
+              bottom: fromBot + '%',
               left: index * barWidth + (index + 1) * barWidth / 4,
               height: datesToPercentage(from, to, date.from, date.to) + '%',
             }}>
             </div>
             <div className="Line" style={{
-              bottom: datePointInRange(from, to, date.from) + '%',
+              bottom: fromBot + '%',
               left: (index + 1) * barWidth + (index + 1) * barWidth / 4,
             }}>
             </div>

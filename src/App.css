@@ -5,11 +5,11 @@
 .PageOne {
   display: grid;
   grid-template-areas:
-    'Header'
-    'Timeline'
-    'Footer';
+    'Header Header'
+    'Timeline Skills'
+    'Footer Footer';
   grid-template-rows: 1fr 8fr 30px;
-  grid-template-columns: 100%;
+  grid-template-columns: 5fr 2fr;
 
   margin: 3rem 2rem;
 }

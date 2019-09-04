@@ -81,7 +81,7 @@ function Items ({ from, to, content }) {
     <div className="Items">
     {
       ordered.map(({ item, index }) => {
-        const { date, category, title, subtitle } = item
+        const { date, category, link, title, subtitle } = item
 
         const color = getColor(category, pallete, colorDictionary)
         const shade = getShade(category, catDictionary)
@@ -123,7 +123,9 @@ function Items ({ from, to, content }) {
               left: (index + 1) * barWidth + (index + 1) * barWidth / 4,
             }}>
             </div>
-            { label }
+            <a href={ link }>
+              { label }
+            </a>
           </React.Fragment>
         )
       })

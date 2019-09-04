@@ -15,7 +15,7 @@
   right: 0;
   height: 0px;
 }
-.Items > .Label {
+.Items .Label {
   position: absolute;
   right: 0;
 
@@ -24,7 +24,7 @@
   margin-top: 3px;
   margin-bottom: 3px;
 }
-.Items > .Label > .Main {
+.Items .Label > .Main {
   color: #777;
 
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -32,7 +32,7 @@
   font-size: 1.0rem;
   line-height: 1.0rem;
 }
-.Items > .Label > .Sub {
+.Items .Label > .Sub {
   color: #777;
 
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;

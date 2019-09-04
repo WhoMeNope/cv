@@ -27,6 +27,34 @@ function datesToPercentage(start, end, from, to) {
   return percentage
 }
 
+function getColor(category, pallete, colorDict) {
+  function RGB_Log_Shade (p,c) {
+    var i=parseInt,r=Math.round,[a,b,c,d]=c.split(","),P=p<0,t=P?0:p*255**2,P=P?1+p:1-p;
+    return"rgb"+(d?"a(":"(")+r((P*i(a[3]=="a"?a.slice(5):a.slice(4))**2+t)**0.5)+","+r((P*i(b)**2+t)**0.5)+","+r((P*i(c)**2+t)**0.5)+(d?","+d:")");
+  }
+
+  const colorCount = pallete.length
+  const assignedColors = Object.keys(colorDict).length
+
+  if (assignedColors >= colorCount - 1) {
+    return pallete[colorCount - 1]
+  }
+
+  const color = colorDict[category] || pallete[assignedColors]
+  colorDict[category] = color
+
+  return color
+}
+
+const pallete = [
+  'rgb(191, 178, 243)',
+  'rgb(150, 202, 247)',
+  'rgb(156, 220, 170)',
+  'rgb(229, 225, 171)',
+  'rgb(243, 198, 165)',
+  'rgb(248, 163, 168)',
+]
+
 function Items ({ from, to, content }) {
   const numbered = content.map((item, index) => {
     return { item, index }
@@ -39,19 +67,20 @@ function Items ({ from, to, content }) {
 
   const slots = Array.apply(null, Array(10)).map(() => true)
 
+  const colorDictionary = {}
+
   return (
     <div className="Items">
     {
       ordered.map(({ item, index }) => {
-        const { date, title, subtitle } = item
+        const { date, category, title, subtitle } = item
+
+        const color = getColor(category, pallete, colorDictionary)
 
         const fromTop = datePointInRangeReverse(from, to, date.from)
         const fromBot = datePointInRange(from, to, date.from)
 
         const slot = Math.floor(fromTop / 10)
-
-        console.log(slot)
-        console.log(slots[slot])
 
         const label = slots[slot] ?
           <div className="Label" style={{
@@ -73,6 +102,7 @@ function Items ({ from, to, content }) {
         return (
           <React.Fragment key={index}>
             <div className="Item" style={{
+              background: color,
               bottom: datePointInRange(from, to, date.from) + '%',
               left: index * barWidth + (index + 1) * barWidth / 4,
               height: datesToPercentage(from, to, date.from, date.to) + '%',

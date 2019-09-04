@@ -40,6 +40,14 @@ function getColor(category, pallete, colorDict) {
 
   return color
 }
+function getShade(category, catDict) {
+  const increment = 0.15
+
+  const shade = catDict[category] || increment
+  catDict[category] = shade + increment
+
+  return Math.min(shade, 0.5)
+}
 
 function RGB_Log_Shade (p,c) {
   var i=parseInt,r=Math.round,[a,b,c,d]=c.split(","),P=p<0,t=P?0:p*255**2,P=P?1+p:1-p;
@@ -67,6 +75,7 @@ function Items ({ from, to, content }) {
 
   const slots = Array.apply(null, Array(10)).map(() => true)
   const colorDictionary = {}
+  const catDictionary = {}
 
   return (
     <div className="Items">
@@ -75,6 +84,7 @@ function Items ({ from, to, content }) {
         const { date, category, title, subtitle } = item
 
         const color = getColor(category, pallete, colorDictionary)
+        const shade = getShade(category, catDictionary)
 
         const fromTop = datePointInRangeReverse(from, to, date.from)
         const fromBot = datePointInRange(from, to, date.from)
@@ -101,7 +111,7 @@ function Items ({ from, to, content }) {
         return (
           <React.Fragment key={index}>
             <div className="Item" style={{
-              background: color,
+              background: RGB_Log_Shade(shade, color),
               bottom: fromBot + '%',
               left: index * barWidth + (index + 1) * barWidth / 4,
               height: datesToPercentage(from, to, date.from, date.to) + '%',

@@ -1,7 +1,7 @@
 import React from 'react'
 import './Items.css'
 
-const barWidth = 20
+const barWidth = 10
 
 function datePointInRange(from, to, date) {
   const diff = date.getTime() - from.getTime()

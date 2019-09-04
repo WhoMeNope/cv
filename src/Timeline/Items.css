@@ -20,6 +20,9 @@
   right: 0;
 
   text-align: right;
+
+  margin-top: 3px;
+  margin-bottom: 3px;
 }
 .Items > .Label > .Main {
   color: #777;
@@ -35,4 +38,5 @@
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
   font-size: 0.9rem;
+  line-height: 0.9rem;
 }

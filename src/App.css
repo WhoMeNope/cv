@@ -15,5 +15,13 @@
 }
 
 .PageTwo {
+  display: grid;
+  grid-template-areas:
+    'Motivation'
+    'Experience'
+    'Github';
+}
 
+.Github {
+  grid-area: Github;
 }

@@ -10,6 +10,9 @@ import Timeline from './Timeline/Timeline'
 import Header from './Header'
 import Footer from './Footer'
 
+import Motivation from './Motivation'
+import Experience from './Experience'
+
 function App() {
   const { header, timeline } = content
 
@@ -21,11 +24,11 @@ function App() {
         <Footer />
       </A4>
       <A4 className="PageTwo">
-        Experiences
-        <br/>
-        Motivation
-        <br/>
-        <GitHubCalendar username="whomenope" />
+        <Motivation />
+        <Experience />
+        <div className="Github">
+          <GitHubCalendar username="whomenope" />
+        </div>
       </A4>
     </div>
   );

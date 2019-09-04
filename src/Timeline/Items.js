@@ -41,12 +41,12 @@ function getColor(category, pallete, colorDict) {
   return color
 }
 function getShade(category, catDict) {
-  const increment = 0.15
+  const increment = 0.12
 
   const shade = catDict[category] || increment
   catDict[category] = shade + increment
 
-  return Math.min(shade, 0.5)
+  return Math.min(shade, 0.6)
 }
 
 function RGB_Log_Shade (p,c) {
@@ -118,6 +118,7 @@ function Items ({ from, to, content }) {
             }}>
             </div>
             <div className="Line" style={{
+              'border-top': '2px solid ' + RGB_Log_Shade(shade, color),
               bottom: fromBot + '%',
               left: (index + 1) * barWidth + (index + 1) * barWidth / 4,
             }}>

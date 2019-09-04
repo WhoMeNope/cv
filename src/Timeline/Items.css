@@ -14,8 +14,6 @@
   position: absolute;
   right: 0;
   height: 0px;
-
-  border-top: 1px #999 dashed;
 }
 .Items > .Label {
   position: absolute;

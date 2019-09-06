@@ -14,7 +14,7 @@ import Motivation from './Motivation'
 import Experience from './Experience'
 
 function App() {
-  const { header, timeline } = content
+  const { header, timeline, motivation } = content
 
   return (
     <div className="App">
@@ -24,7 +24,7 @@ function App() {
         <Footer />
       </A4>
       <A4 className="PageTwo">
-        <Motivation />
+        <Motivation text={ motivation } />
         <Experience />
         <div className="Github">
           <GitHubCalendar username="whomenope" />

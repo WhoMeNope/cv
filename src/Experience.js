@@ -7,10 +7,20 @@ const Experience = ({ content }) => {
       <div className="title">Experience</div>
       <div className="container">
       {
-        content.map(({ title, position }) => {
+        content.map(({ title, position, items }) => {
           return (
-            <div>
-              { title }
+            <div className='item'>
+              <div className='title'>{ title }</div>
+              <div className='position'>{ position }</div>
+              <ul className='content'>
+              {
+                items.map(point => {
+                  return (
+                    <li>{ point }</li>
+                  )
+                })
+              }
+              </ul>
             </div>
           )
         })

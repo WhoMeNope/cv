@@ -5,3 +5,13 @@
 .Experience > .title {
   text-align: left;
 }
+
+.Experience .item {
+  display: grid;
+
+  grid-template-areas:
+    'title position'
+    'content content';
+
+  margin: 2rem 0;
+}

@@ -1,0 +1,7 @@
+.Experience {
+  margin: 2rem 0;
+}
+
+.Experience > .title {
+  text-align: left;
+}

@@ -20,6 +20,7 @@
     'Motivation'
     'Experience'
     'Github';
+  grid-template-rows: min-content auto min-content;
 
   margin: 3rem 2rem;
 }

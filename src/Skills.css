@@ -26,10 +26,13 @@
 .Skills > .section > ul {
   position: relative;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   margin: 0;
   padding: 0.5rem 0.5rem;
 
-  color: #666;
   font-size: 0.9rem;
 
   border-left: 2px solid #BBB;
@@ -59,4 +62,6 @@
   list-style: none;
 
   text-align: left;
+
+  margin: 0.1rem 0;
 }

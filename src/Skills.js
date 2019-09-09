@@ -8,16 +8,18 @@ const Skills = ({ content }) => {
       content.map(({ title, items }) => {
         return (
           <div className="section">
-            { title }
-          {
-            items.map(({ title, subtitle }) => {
-              return (
-                <div>
-                  { title } : { subtitle }
-                </div>
-              )
-            })
-          }
+            <div className="title">{ title }</div>
+            <ul className="items">
+            {
+              items.map(({ title, subtitle }) => {
+                return (
+                  <li>
+                    { title }: { subtitle }
+                  </li>
+                )
+              })
+            }
+            </ul>
           </div>
         )
       })

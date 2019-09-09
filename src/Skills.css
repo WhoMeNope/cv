@@ -1,6 +1,32 @@
 .Skills {
+  margin: 1rem 0;
 }
 
 .Skills > .section {
+  margin: 1rem 0;
 
+  display: grid;
+  grid-template-areas:
+    'title items';
+}
+.Skills > .section > .title {
+  color: #666;
+  font-weight: bold;
+
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+}
+
+.Skills > .section > ul {
+  margin: 0;
+  padding: 0;
+
+  color: #666;
+  font-size: 0.9rem;
+}
+.Skills > .section > ul > li {
+  list-style: none;
+
+  text-align: left;
 }

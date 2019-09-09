@@ -5,10 +5,19 @@ const Skills = ({ content }) => {
   return (
     <div className="Skills">
     {
-      content.map(({ title }) => {
+      content.map(({ title, items }) => {
         return (
           <div className="section">
             { title }
+          {
+            items.map(({ title, subtitle }) => {
+              return (
+                <div>
+                  { title } : { subtitle }
+                </div>
+              )
+            })
+          }
           </div>
         )
       })

@@ -1,11 +1,23 @@
 .A4-outer {
   position: relative;
-  width: calc(100% - 30px);
-  padding-top: calc(141.4% - 30px);
 
   margin: 15px;
 
   background: white;
+}
+
+@media (orientation: landscape) {
+  .A4-outer {
+    height: calc(100vh - 30px);
+    padding-top: none;
+    width: calc(70.7vh - 30px);
+  }
+}
+@media (orientation: portrait) {
+  .A4-outer {
+    width: calc(100% - 30px);
+    padding-top: calc(141.4% - 30px);
+  }
 }
 
 @media print {

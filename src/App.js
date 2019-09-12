@@ -14,27 +14,35 @@ import Footer from './Footer'
 import Motivation from './Motivation'
 import Experience from './Experience'
 
-function App() {
-  const { header, timeline, skills, motivation, experience }
-    = content
+class App extends React.Component {
 
-  return (
-    <div className="App">
-      <A4 className="PageOne">
-        <Header content={ header } />
-        <Timeline content={ timeline } />
-        <Footer />
-      </A4>
-      <A4 className="PageTwo">
-        <Motivation text={ motivation } />
-        <Experience content={ experience }/>
-        <Skills content={ skills } />
-        <div className="Github">
-          <GitHubCalendar username="whomenope" />
-        </div>
-      </A4>
-    </div>
-  );
+  componentDidMount() {
+    const { title } = content
+    document.title = title
+  }
+
+  render () {
+    const { title, header, timeline, skills, motivation, experience }
+      = content
+
+    return (
+      <div className="App">
+        <A4 className="PageOne">
+          <Header content={ header } />
+          <Timeline content={ timeline } />
+          <Footer />
+        </A4>
+        <A4 className="PageTwo">
+          <Motivation text={ motivation } />
+          <Experience content={ experience }/>
+          <Skills content={ skills } />
+          <div className="Github">
+            <GitHubCalendar username="whomenope" />
+          </div>
+        </A4>
+      </div>
+    )
+  }
 }
 
 export default App;

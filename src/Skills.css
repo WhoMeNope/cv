@@ -1,4 +1,6 @@
 .Skills {
+  grid-area: Skills;
+
   margin: 2rem 0 2rem 0.5rem;
 }
 
@@ -7,9 +9,6 @@
   grid-template-areas:
     'title items';
   grid-template-columns: min-content auto;
-}
-.Skills > .section:not(:last-child) {
-  margin-bottom: 2rem;
 }
 
 .Skills > .section > .title {
@@ -47,7 +46,7 @@
 
   background: #BBB;
 }
-.Skills > .section > ul::after {
+.Skills > .section:last-of-type > ul::after {
   content: "";
   position: absolute;
   left: 0;

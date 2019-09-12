@@ -7,7 +7,7 @@
 .Items > .Item {
   position: absolute;
 
-  width: 17.5px;
+  width: 20px;
   box-sizing: border-box;
 }
 .Items > .Line {

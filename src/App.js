@@ -23,12 +23,12 @@ function App() {
       <A4 className="PageOne">
         <Header content={ header } />
         <Timeline content={ timeline } />
-        <Skills content={ skills } />
         <Footer />
       </A4>
       <A4 className="PageTwo">
         <Motivation text={ motivation } />
         <Experience content={ experience }/>
+        <Skills content={ skills } />
         <div className="Github">
           <GitHubCalendar username="whomenope" />
         </div>

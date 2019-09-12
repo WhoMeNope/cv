@@ -9,11 +9,10 @@
 .PageOne {
   display: grid;
   grid-template-areas:
-    'Header Header'
-    'Timeline Skills'
-    'Footer Footer';
+    'Header'
+    'Timeline'
+    'Footer';
   grid-template-rows: 1fr 8fr 30px;
-  grid-template-columns: 5fr 2fr;
 
   margin: 3rem 2rem;
 }
@@ -21,10 +20,11 @@
 .PageTwo {
   display: grid;
   grid-template-areas:
-    'Motivation'
-    'Experience'
-    'Github';
+    'Motivation Motivation'
+    'Experience Skills'
+    'Github Github';
   grid-template-rows: min-content auto min-content;
+  grid-template-columns: 3fr 2fr;
 
   margin: 3rem 2rem;
 }

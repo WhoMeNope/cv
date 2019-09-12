@@ -1,4 +1,6 @@
 .Experience {
+  grid-area: Experience;
+
   margin: 2rem 0;
 }
 

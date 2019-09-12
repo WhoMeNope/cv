@@ -10,15 +10,34 @@
   display: grid;
 
   grid-template-areas:
-    'title position'
-    'content content';
+    'title'
+    'content';
+
+  text-align: left;
 
   margin: 2rem 0;
 }
 
-.Experience .item > ul {
-  margin: 0;
+.Experience .item > .title {
+  color: #666;
+  font-size: 18px;
+}
+.Experience .item > .title > .at {
+  color: #FA6E4F;
+  font-weight: bold;
+}
+.Experience .item > ul.content {
+  grid-area: content;
+
+  margin: 0.5rem 0 0 0;
   padding: 0;
+
+  color: #666;
+  font-size: 16px;
+}
+.Experience .item > ul > li:before {
+  content: '- ';
+  padding: 0 0 0 1rem;
 }
 .Experience .item > ul > li {
   list-style: none;

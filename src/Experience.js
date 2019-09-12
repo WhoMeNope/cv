@@ -10,8 +10,9 @@ const Experience = ({ content }) => {
         content.map(({ title, position, items }) => {
           return (
             <div className='item'>
-              <div className='title'>{ title }</div>
-              <div className='position'>{ position }</div>
+              <div className='title'>
+                { position } <span className="at">@</span> { title }
+              </div>
               <ul className='content'>
               {
                 items.map(point => {

@@ -6,6 +6,9 @@
 
 .Experience > .title {
   text-align: left;
+  font-size: 26px;
+  font-family: 'Work Sans', sans-serif;
+  text-transform: uppercase;
 }
 
 .Experience .item {

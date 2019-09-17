@@ -1,0 +1,27 @@
+sudo: required
+
+env:
+  global:
+    - DOCKER_IMAGE_NAME=cv
+
+language: node_js
+node_js:
+  - '11'
+
+services:
+  - docker
+
+before_script:
+  - yarn
+
+script:
+  - make
+
+# before_deploy:
+
+# deploy:
+#   - provider: script
+#     script:
+#     skip_cleanup: true
+#     on:
+#       branch: master

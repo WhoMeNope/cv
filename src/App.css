@@ -12,7 +12,7 @@
     'Header'
     'Timeline'
     'Footer';
-  grid-template-rows: 1fr 8fr 30px;
+  grid-template-rows: min-content auto min-content;
 
   margin: 3rem 2rem;
 }

@@ -1,4 +1,7 @@
 # CV template
+
+[![Build Status](https://travis-ci.org/WhoMeNope/cv.svg?branch=master)](https://travis-ci.org/WhoMeNope/cv)
+
 Renders ```data.js``` as a beautiful cv.
 
 ## Features

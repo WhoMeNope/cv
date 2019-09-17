@@ -19,7 +19,7 @@ class App extends React.Component {
   }
 
   render () {
-    const { title, header, timeline, skills, motivation, experience }
+    const { header, timeline, skills, motivation, experience }
       = document.content
 
     return (

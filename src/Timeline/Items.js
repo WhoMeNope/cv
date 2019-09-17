@@ -50,8 +50,8 @@ function getShade(category, catDict) {
 }
 
 function RGB_Log_Shade (p,c) {
-  var i=parseInt,r=Math.round,[a,b,c,d]=c.split(","),P=p<0,t=P?0:p*255**2,P=P?1+p:1-p;
-  return"rgb"+(d?"a(":"(")+r((P*i(a[3]=="a"?a.slice(5):a.slice(4))**2+t)**0.5)+","+r((P*i(b)**2+t)**0.5)+","+r((P*i(c)**2+t)**0.5)+(d?","+d:")");
+  var i=parseInt,r=Math.round,[a,b,x,d]=c.split(","),t=p<0?0:p*255**2,P=p<0?1+p:1-p;
+  return"rgb"+(d?"a(":"(")+r((P*i(a[3]==="a"?a.slice(5):a.slice(4))**2+t)**0.5)+","+r((P*i(b)**2+t)**0.5)+","+r((P*i(x)**2+t)**0.5)+(d?","+d:")");
 }
 
 const pallete = [

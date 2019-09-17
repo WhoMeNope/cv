@@ -43,7 +43,7 @@ function orderContent(content) {
 }
 
 function Timeline ({ content }) {
-  const { min, max } = minMaxDates(content)
+  const { min } = minMaxDates(content)
 
   content = orderContent(content)
 

@@ -1,10 +1,8 @@
 .Footer {
   grid-area: Footer;
 
-  display: grid;
-  grid-template-areas:
-    'Link';
-  grid-template-columns: 100%;
+  display: flex;
+  justify-content: space-around;
   align-items: center;
 
   font-size: 0.9rem;

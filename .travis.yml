@@ -17,11 +17,13 @@ before_script:
 script:
   - make
 
-# before_deploy:
+before_deploy:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker tag $DOCKER_IMAGE_NAME:latest whomenope/cv:latest
 
-# deploy:
-#   - provider: script
-#     script:
-#     skip_cleanup: true
-#     on:
-#       branch: master
+deploy:
+  - provider: script
+    script: docker push whomenope/cv:latest
+    skip_cleanup: true
+    on:
+      branch: master

@@ -1,8 +1,6 @@
 import React from 'react';
 import './App.css';
 
-import content from './data.js'
-
 import GitHubCalendar from 'react-github-calendar'
 
 import A4 from './A4'
@@ -17,13 +15,12 @@ import Experience from './Experience'
 class App extends React.Component {
 
   componentDidMount() {
-    const { title } = content
-    document.title = title
+    document.title = document.content.title
   }
 
   render () {
     const { title, header, timeline, skills, motivation, experience }
-      = content
+      = document.content
 
     return (
       <div className="App">

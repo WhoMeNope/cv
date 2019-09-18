@@ -14,7 +14,8 @@ const Skills = ({ content }) => {
               items.map(({ title, subtitle }) => {
                 return (
                   <li>
-                    { title }: { subtitle }
+                    { title }{ subtitle ? ': ' : null }
+                    <div className="sub">{ subtitle }</div>
                   </li>
                 )
               })

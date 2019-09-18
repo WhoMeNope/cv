@@ -2,6 +2,10 @@
   grid-area: Skills;
 
   margin: 2rem 0 2rem 0.5rem;
+
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
 }
 
 .Skills > .section {
@@ -20,6 +24,8 @@
   transform: rotate(180deg);
 
   padding: 1rem 0 1rem 2px;
+
+  white-space: nowrap;
 }
 
 .Skills > .section > ul {
@@ -33,6 +39,7 @@
   padding: 0.5rem 0.5rem;
 
   font-size: 0.9rem;
+  color: #444;
 
   border-left: 2px solid #BBB;
 }
@@ -63,4 +70,9 @@
   text-align: left;
 
   margin: 0.1rem 0;
+}
+.Skills > .section > ul > li > .sub {
+  margin: 0 0 0 1rem;
+
+  white-space: nowrap;
 }

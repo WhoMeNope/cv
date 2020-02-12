@@ -123,9 +123,7 @@ function Items ({ from, to, content }) {
               left: (index + 1) * barWidth + (index + 1) * barWidth / 4,
             }}>
             </div>
-            <a href={ link }>
-              { label }
-            </a>
+            <a href={ link }> { label } </a>
           </React.Fragment>
         )
       })

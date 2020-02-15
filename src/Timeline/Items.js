@@ -118,6 +118,16 @@ function Items ({ from, to, content }) {
               height: datesToPercentage(from, to, date.from, date.to) + '%',
             }}>
             </div>
+
+            {
+             // If there is no end date
+             (!date.to) &&
+             <div className="ItemContinuation" style={{
+               background: `linear-gradient(rgba(1.0, 1.0, 1.0, 0.0), ${RGB_Log_Shade(shade, color)})`,
+               left: index * barWidth + (index + 1) * barWidth,
+              }}></div>
+            }
+
             <div className="Line" style={{
               'border-top': '2px solid ' + RGB_Log_Shade(shade, color),
               bottom: fromBot + '%',

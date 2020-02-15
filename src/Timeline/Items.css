@@ -10,6 +10,14 @@
   width: 20px;
   box-sizing: border-box;
 }
+.Items > .ItemContinuation {
+  position: absolute;
+
+  bottom: 100%;
+  width: 20px;
+  height: 40px;
+  box-sizing: border-box;
+}
 .Items > .Line {
   position: absolute;
   right: 0;

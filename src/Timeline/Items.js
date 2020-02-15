@@ -1,7 +1,8 @@
 import React from 'react'
 import './Items.css'
 
-const barWidth = 10
+const slotCount = 16
+const barWidth = 15
 
 function datePointInRange(from, to, date) {
   const diff = date.getTime() - from.getTime()
@@ -73,7 +74,7 @@ function Items ({ from, to, content }) {
     return d - c
   })
 
-  const slots = Array.apply(null, Array(10)).map(() => true)
+  const slots = Array.apply(null, Array(slotCount)).map(() => true)
   const colorDictionary = {}
   const catDictionary = {}
 
@@ -89,7 +90,7 @@ function Items ({ from, to, content }) {
         const fromTop = datePointInRangeReverse(from, to, date.from)
         const fromBot = datePointInRange(from, to, date.from)
 
-        const slot = Math.floor(fromTop / 10)
+        const slot = Math.floor(fromTop / slotCount)
 
         const label = slots[slot] ?
           <div className="Label" style={{
@@ -113,14 +114,14 @@ function Items ({ from, to, content }) {
             <div className="Item" style={{
               background: RGB_Log_Shade(shade, color),
               bottom: fromBot + '%',
-              left: index * barWidth + (index + 1) * barWidth / 4,
+              left: index * barWidth + (index + 1) * barWidth,
               height: datesToPercentage(from, to, date.from, date.to) + '%',
             }}>
             </div>
             <div className="Line" style={{
               'border-top': '2px solid ' + RGB_Log_Shade(shade, color),
               bottom: fromBot + '%',
-              left: (index + 1) * barWidth + (index + 1) * barWidth / 4,
+              left: (index + 1) * barWidth + (index + 1) * barWidth,
             }}>
             </div>
             <a href={ link }> { label } </a>

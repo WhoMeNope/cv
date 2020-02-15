@@ -6,11 +6,10 @@ let
     inherit (pinnedVersion) url rev;
 
     ref = "nixos-unstable";
-  }) {};
-in
+  }) { };
 
-# This allows overriding pkgs by passing `--arg pkgs ...`
-{ pkgs ? pinnedPkgs }:
+  # This allows overriding pkgs by passing `--arg pkgs ...`
+in { pkgs ? pinnedPkgs }:
 
 with pkgs;
 
@@ -18,5 +17,9 @@ mkShell {
   buildInputs = [
     # put packages here.
     yarn
+    nodePackages.dockerfile-language-server-nodejs
+    nodePackages.typescript
+    nodePackages.typescript-language-server
+    nodePackages.vscode-css-languageserver-bin
   ];
 }

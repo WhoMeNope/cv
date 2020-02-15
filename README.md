@@ -1,12 +1,22 @@
 # CV template
-
 [![Build Status](https://travis-ci.org/WhoMeNope/cv.svg?branch=master)](https://travis-ci.org/WhoMeNope/cv)
 
-Renders ```data.js``` as a beautiful cv.
+Renders structured JSON as a beautiful dynamic CV.
 
 ## Features
-1. Auto-organizing events' timeline
-2. Display structured cv data (JSON) in a pleasing way
+1. Automatically render structured CV data (JSON)
+2. Auto-organizing events' timeline
 3. Minimal pastel-themed design
 4. Print-ready
 
+## Available as a Docker image
+To run:
+
+1. Create `data.js` according to the template in `public/data.js`
+2. Run
+  ```sh
+  $ docker run --rm \
+    --port 3000:80 \
+    --mount type=bind,source=$(pwd)/data.js,target=/usr/share/nginx/html/data.js \
+    cv
+  ```

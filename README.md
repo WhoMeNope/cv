@@ -17,6 +17,6 @@ To run:
   ```sh
   $ docker run --rm \
     --port 3000:80 \
-    --mount type=bind,source=$(pwd)/data.js,target=/usr/share/nginx/html/data.js \
-    cv
+    --mount type=bind,source=$(pwd)/data.js,target=/usr/share/nginx/html/data.js,readonly \
+    whomenope/cv:latest
   ```

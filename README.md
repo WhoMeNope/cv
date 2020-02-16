@@ -1,5 +1,5 @@
 # CV template
-[![Build Status](https://travis-ci.org/WhoMeNope/cv.svg?branch=master)](https://travis-ci.org/WhoMeNope/cv)
+[![Build Status](https://travis-ci.com/WhoMeNope/cv.svg?branch=master)](https://travis-ci.com/WhoMeNope/cv)
 
 Renders structured JSON as a beautiful dynamic CV.
 

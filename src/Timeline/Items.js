@@ -58,10 +58,10 @@ function RGB_Log_Shade (p,c) {
 const pallete = [
   'rgb(191, 178, 243)',
   'rgb(150, 202, 247)',
-  'rgb(156, 220, 170)',
-  'rgb(229, 225, 171)',
   'rgb(243, 198, 165)',
   'rgb(248, 163, 168)',
+  'rgb(156, 220, 170)',
+  'rgb(229, 225, 171)',
 ]
 
 function Items ({ from, to, content }) {
